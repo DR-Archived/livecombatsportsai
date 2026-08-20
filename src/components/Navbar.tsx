@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
+  { href: "/legal/final-demand", label: "Final Demand" },
 ];
 
 export function Navbar() {
