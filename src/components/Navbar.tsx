@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
   { href: "/legal/final-demand", label: "Final Demand" },
+  { href: "/compare", label: "Compare" },
 ];
 
 export function Navbar() {
