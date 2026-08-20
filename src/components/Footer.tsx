@@ -27,6 +27,12 @@ const footerLinks = [
       { href: "/refund", label: "Refund Policy" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { href: "/legal/final-demand", label: "Final Letter of Demand" },
+    ],
+  },
 ];
 
 const socials = [
