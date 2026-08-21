@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { AlertTriangle, Clock, ArrowUpRight, ShieldAlert, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "./Logo";
 
 const INVOICE_DATE = new Date("2026-06-11");
 
@@ -54,10 +55,8 @@ export function FinalDemandPopup() {
         >
           {/* Header - fixed at top */}
           <div className="flex-shrink-0 p-4 md:p-6 border-b border-white/10 sticky top-0 bg-bg-primary/95 backdrop-blur-sm z-10">
-            <div className="flex items-start gap-3 mb-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center">
-                <AlertTriangle className="h-5 w-5 text-primary" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size="md" variant="full" className="flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <h1 id="final-demand-title" className="text-lg md:text-xl font-extrabold text-white truncate">
                   FINAL LETTER OF DEMAND
