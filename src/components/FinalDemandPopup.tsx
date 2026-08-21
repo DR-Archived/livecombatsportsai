@@ -12,11 +12,26 @@ function getDaysUnpaid(): number {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 
+function getTimeUntil5pmAEST(): string {
+  const now = new Date();
+  // Create target date for today 17:00 AEST (assuming browser timezone is AEST)
+  const target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
+  const diff = target.getTime() - now.getTime();
+  if (diff <= 0) return "Deadline passed";
+  const hrs = Math.floor(diff / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+  return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
 export function FinalDemandPopup() {
   const [daysUnpaid, setDaysUnpaid] = useState(0);
+  const [countdown, setCountdown] = useState(getTimeUntil5pmAEST());
 
   useEffect(() => {
     setDaysUnpaid(getDaysUnpaid());
+    const interval = setInterval(() => setCountdown(getTimeUntil5pmAEST()), 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -67,7 +82,11 @@ export function FinalDemandPopup() {
                     {daysUnpaid} DAYS
                   </p>
                 </div>
-                <span className="ml-auto px-2 py-0.5 text-xs font-bold text-red-300 bg-red-500/30 border border-red-500/40 rounded-full uppercase tracking-wider">
+                <div className="ml-auto text-right">
+                  <p className="text-xs text-text-muted">TIME UNTIL 5PM AEST</p>
+                  <p className="text-xl md:text-2xl font-mono font-extrabold text-red-400 tracking-tight font-mono">{countdown}</p>
+                </div>
+                <span className="ml-4 px-2 py-0.5 text-xs font-bold text-red-300 bg-red-500/30 border border-red-500/40 rounded-full uppercase tracking-wider">
                   Overdue
                 </span>
               </div>
