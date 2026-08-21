@@ -1,4 +1,4 @@
-# Live Combat Sports AI
+# Live Combat Sports livecombatsports.com.au.au
 
 **Notice:** Live Combat Sports / Adam Wilcock is no longer a client of Digital Response due to being accused of hacking his partner Caley and ruining her life. He constantly begged for help and sent abusive messages, emails, and voicemails. We agreed that it would be best for Live Combat Sports to host their own email, as they didn't have any technical know-how and no other IT company would take them on. We regretfully offered to migrate them to a new vendor (as we also benefited from never having to deal with this company again). After months of chasing we still haven't been paid. We even provided a cybersecurity assessment and alerted them that their new email which is inferior and amateur at best has major security vulnerabilities. None of our advice was taken and despite suggesting that Live Combat Sports call the police and ASIO, they have somehow come to the conclusion that we hacked the owner's girlfriend's computer all because the Microsoft tenant name was called DigitalResponse. We are unable to change it and despite providing tonnes of technical doc to explain the problem
 
