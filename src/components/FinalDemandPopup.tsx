@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { AlertTriangle, Clock, ArrowUpRight } from "lucide-react";
+import { AlertTriangle, Clock, ArrowUpRight, ShieldAlert, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const INVOICE_DATE = new Date("2026-06-11");
@@ -296,8 +296,18 @@ export function FinalDemandPopup() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="w-full"
+              className="space-y-3"
             >
+              {/* RED ALERT: Security Issues Link */}
+              <a
+                href="/compare"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-red-600/20 border-2 border-red-500 text-red-300 font-extrabold text-sm hover:bg-red-600/30 hover:border-red-400 transition-all"
+              >
+                <ShieldAlert className="h-5 w-5 animate-pulse" />
+                <span>🔴 RED ALERT: Independent AI Comparison — Critical Security Issues on livecombatsports.com.au</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+
               <a
                 href="/legal/final-demand"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-[#0D0D0D] font-extrabold text-sm hover:bg-primary-glow transition-colors"
