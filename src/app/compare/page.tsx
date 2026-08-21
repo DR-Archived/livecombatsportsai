@@ -332,7 +332,7 @@ export default function ComparePage() {
                             </span>
                           </td>
                           <td className="px-4 py-3 text-center">
-                            <WinnerIcon winner={metric.winner} />
+                            <WinnerIcon winner={metric.winner as "new" | "tie" | "old"} />
                           </td>
                         </tr>
                       ))}
